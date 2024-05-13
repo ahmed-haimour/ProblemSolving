@@ -1,1 +1,45 @@
+#include <iostream>
+#include <string>
+using namespace std;
 
+enum ODD_EVEN{odd = 1, even = 2};
+
+int Readnumber()
+{
+	int num;
+
+	cout << "Enter number" << endl;
+	cin >> num;
+	return num;
+}
+
+ODD_EVEN check_odd_or_even(int num)
+{
+	int result = num % 2;
+
+	if (result == 0)
+		return ODD_EVEN::even;
+	else
+	
+		return ODD_EVEN::odd;
+	
+}
+
+void PrintNumbertype(ODD_EVEN numberType)
+{
+	if (numberType == ODD_EVEN::even)
+	
+		cout << "number is even" <<endl;
+	else
+	{
+		cout << "number is ODD" << endl;
+	}
+}
+
+int main()
+{
+	
+	PrintNumbertype(check_odd_or_even(Readnumber()));
+	
+   return 0;
+}
