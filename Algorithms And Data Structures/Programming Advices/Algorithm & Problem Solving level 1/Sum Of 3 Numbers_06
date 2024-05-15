@@ -1,0 +1,39 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+void ReadNumber(int& number1,int& number2, int& number3)
+{
+	cout << "Pleas Enter your number1" <<endl;
+	cin >> number1;
+
+	cout << "Pleas Enter your number2" << endl;
+	cin >> number2;
+	
+    cout << "Pleas Enter your number3" << endl;
+	cin >> number3;
+
+
+}
+
+int sumNumber(int number1, int number2, int number3)
+{
+	return number1 + number2 + number3;
+}
+
+void PrintNumber(int Total)
+{
+	cout << "\n The Total sum of number is: " << Total << endl;
+}
+
+int main()
+{
+	int number1 ;
+    int number2 ;
+    int number3 ;
+
+	ReadNumber(number1, number2, number3);
+	PrintNumber(sumNumber(number1, number2,number3));
+
+	return 0;
+}
