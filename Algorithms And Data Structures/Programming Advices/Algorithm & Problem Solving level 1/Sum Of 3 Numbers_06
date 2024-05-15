@@ -28,7 +28,7 @@ void PrintNumber(int Total)
 
 int main()
 {
-	int number1 ;
+    int number1 ;
     int number2 ;
     int number3 ;
 
