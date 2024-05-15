@@ -1,0 +1,40 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+enum enPassFail {Pass = 1, Fail = 2};
+
+int  ReadMarck()
+{
+	int Marck;
+
+	cout << "Pleas Enter your Marck" <<endl;
+	cin >> Marck;
+
+	return Marck;
+}
+
+enPassFail CheckMarck(int Marck)
+{
+	if (Marck >= 50)
+		return enPassFail::Pass;
+	else
+		return enPassFail::Fail;
+}
+
+void PrintResult(int Marck)
+{
+	if (CheckMarck(Marck) == enPassFail::Pass)
+		cout << "\n You Passed " <<endl;
+	else
+		cout << "\n You Faild " << endl;
+}
+
+
+int main()
+{
+	
+	PrintResult(ReadMarck());
+
+	return 0;
+}
