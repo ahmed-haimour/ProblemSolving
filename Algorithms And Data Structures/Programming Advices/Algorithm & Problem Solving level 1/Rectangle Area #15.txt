@@ -1,0 +1,36 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+void ReadRectangleArea(float& a, float& b)
+{
+	cout << "Pleas Enter Rectangle width A: " << endl;
+	cin >> a;
+
+	cout << "Pleas Enter Rectangle lingth B: " << endl;
+	cin >> b;
+
+}
+
+float calculateRectangleArea(float a, float b)
+{
+	return a * b;
+}
+
+void PrintRectangleArea(float area)
+{
+	cout <<"Rectangle Area = " << area << endl;
+}
+
+int main()
+{
+	float a, b;
+	ReadRectangleArea(a, b);
+	PrintRectangleArea(calculateRectangleArea(a, b));
+
+	return 0;
+}
+
+
+
+

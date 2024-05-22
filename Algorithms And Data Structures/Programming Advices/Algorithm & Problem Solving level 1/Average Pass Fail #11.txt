@@ -1,0 +1,56 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+enum enPassFail{Pass = 1, Fail = 2};
+void ReadNumber(int& Marck1, int& Marck2, int& Marck3)
+{
+	cout << "Pleas Enter your Marck1" << endl;
+	cin >> Marck1;
+
+	cout << "Pleas Enter your Marck2" << endl;
+	cin >> Marck2;
+
+	cout << "Pleas Enter your Marck3" << endl;
+	cin >> Marck3;
+
+
+}
+
+int sumNumber(int Marck1, int Marck2, int Marck3)
+{
+	return (Marck1 + Marck2 + Marck3);
+}
+
+float calulateAverage(int Marck1, int Marck2, int Marck3)
+{
+	return (float)sumNumber(Marck1, Marck2, Marck3) / 3;
+}
+
+enPassFail chickPassFail(float average)
+{
+	if (average >= 50)
+		return enPassFail::Pass;
+	else
+		return enPassFail::Fail;
+
+}
+
+void PrintNumber(float average)
+{
+	cout << "\n your Aversge is: " << average << endl;
+	if (chickPassFail(average) == enPassFail::Pass)
+		cout << "\n You Passed \n";
+	else
+		cout << "\n You Faild \n";
+}
+
+int main()
+{
+	int Marck1, Marck2, Marck3;
+
+	ReadNumber(Marck1, Marck2, Marck3);
+	PrintNumber(calulateAverage(Marck1, Marck2, Marck3));
+
+	return 0;
+}

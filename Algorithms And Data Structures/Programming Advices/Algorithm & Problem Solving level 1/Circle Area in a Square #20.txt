@@ -1,0 +1,38 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+float ReadSquareSide()
+{
+	float A;
+
+	cout << "Pleas Enter Radious A ? " << endl;
+	cin >> A;
+
+	return A;
+}
+
+float CircleArea_In_scribed_in_aSquare(float A)
+{
+	const float PI = 3.141592653589793238;
+
+	float Area = (PI * pow(A, 2)) / 4;
+	return Area;
+}
+
+void PrintCircleArea(float area)
+{
+	cout <<"Circle Area = " << area << endl;
+}
+
+int main()
+{
+
+	PrintCircleArea(CircleArea_In_scribed_in_aSquare(ReadSquareSide()));
+
+	return 0;
+}
+
+
+
+

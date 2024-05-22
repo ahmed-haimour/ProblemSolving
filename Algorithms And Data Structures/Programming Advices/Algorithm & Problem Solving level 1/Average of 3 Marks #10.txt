@@ -1,0 +1,44 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+void ReadNumber(int& Marck1,int& Marck2, int& Marck3)
+{
+	cout << "Pleas Enter your Marck1" <<endl;
+	cin >> Marck1;
+
+	cout << "Pleas Enter your Marck2" << endl;
+	cin >> Marck2;
+	
+    cout << "Pleas Enter your Marck3" << endl;
+	cin >> Marck3;
+
+
+}
+
+int sumNumber(int Marck1, int Marck2, int Marck3)
+{
+	return (Marck1 + Marck2 + Marck3);
+}
+
+float calulateAverage(int Marck1, int Marck2, int Marck3)
+{
+	return (float)sumNumber(Marck1, Marck2, Marck3) / 3;
+}
+
+void PrintNumber(float average)
+{
+	cout << "\n The Average sum of number is: " << average << endl;
+}
+
+int main()
+{
+	int Marck1;
+    int Marck2;
+    int Marck3;
+
+	ReadNumber(Marck1, Marck2, Marck3);
+	PrintNumber(calulateAverage(Marck1, Marck2, Marck3));
+
+	return 0;
+}
